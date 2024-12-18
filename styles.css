@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background: #000000;
+  overflow: hidden;
+  height: 100vh;
+  cursor: none;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  color: #aaa;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#typed-text {
+  color: white;
+  font-size: 3.5rem;
+  display: inline-block;
+  margin-top: 100px;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  border-radius: 50%;
+  animation: blink 0.7s infinite step-end;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left:-15rem;
+  transform: translateY(-50%) rotate(270deg); /* Remove rotation for horizontal text */
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2em;
+  z-index: 2;
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: row-reverse; /* Align items horizontally */
+  gap: 20rem;
+  font-weight: bolder; /* Space between items */
+}
+
+.sidebar p {
+  margin: 0;
+}
+
+/* Make "M" bigger and remove rotation */
+.sidebar p:nth-child(1) {
+  font-size: 2rem; /* Increase font size */
+  transform: rotate(90deg);
+  position:absolute;
+  right: -3rem;
+  top: 0.3rem;
+}
+
+.sidebar .uppercontent{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+}
+
+.sidebar .lowercontent{
+  display: flex;
+  gap: 2rem;
+}
+
+/* Social media icons */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  transform: rotate(270deg) translateY(-50%);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  transform: rotate(90);
+}
+
+.sidebar p:hover {
+  color: #7084F4; /* Change text color to #7084F4 on hover */
+  text-shadow: 2px 2px 4px #7084F4; /* Add a blue text shadow */
+}
+
+.sidebar p:hover {
+  color: #7084F4; /* Change text color to blue on hover */
+}
+
+/* Bottom Center SVG Icon */
+.bottom-center-icon {
+  position: fixed;
+  bottom: 10px; /* Adjust the position from the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 999; /* Make sure it's above other content */
+}
+
+/* Smooth blinking effect and grey color for SVG */
+.bottom-center-icon svg {
+  fill: #808080; /* Grey color */
+  animation: blinkEffect 2s infinite ease-in-out;
+}
+
+/* Blinking effect */
+@keyframes blinkEffect {
+  0%, 100% {
+    opacity: 0.5; /* Light visibility */
+  }
+  50% {
+    opacity: 1; /* Full visibility */
+  }
+}
+.custom-cursor {
+  position: fixed;
+  width: 12px; /* Size of the dot */
+  height: 12px;
+  background-color: #7084F4; /* Blue color */
+  border-radius: 50%; /* Circle shape */
+  pointer-events: none; /* Prevent cursor interference */
+  z-index: 1000;
+  transform: translate(-50%, -50%); /* Center the cursor on the pointer */
+  transition: transform 0.2s ease-out; /* Smooth movement with easing */
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #7084F4;
+  text-shadow: 2px 2px 4px #7084F4;
+}
+
